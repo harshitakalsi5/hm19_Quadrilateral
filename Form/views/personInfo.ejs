@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head>
+<title> Donor Information </title>
+<style>
+body{
+background-color:#EBF5FB;
+	color:#730245;
+}
+
+</style>
+
+<body>
+<h1>
+<form action='/update' method='post'>
+Name: <%= person.name %>
+<input name='name' value='<%= person.name %>' hidden>
+<br>Age: <%= person.age %>
+<input name='age' value='<%= person.age %>' hidden>
+<br>Blood Group: <%= person.bloodgroup %>
+<input name='blood' value='<%= person.bloodgroup %>' hidden>
+<br>Address: <%= person.address %>
+<input name='address' value='<%= person.address %>' hidden>
+<br>Blood Report after Donation: <%= person.donation %>
+<input name='donation' value='<%= person.donation %>' >
+<input type='submit' value='Update'>
+</form>
+</h1>
+
+
+ 
+ 
+<br> Click <a href='/all'> HERE  </a>to update more donors  
+</body>
+</html> 

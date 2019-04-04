@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> Generate Request </title>
+<style>
+body{
+    background-color:#EBF5FB;
+}
+
+#formreq{
+	color:#730245;
+}
+
+#header{
+	font-family:calibri;
+	color:#730245;
+	padding-top:20px;
+	padding-left:10px;
+}
+
+#contain{
+	background-color: #D6EAF8;
+	font-family:calibri;
+	position: relative;
+	border-style:solid;
+	height: 400px;
+	width: 700px;
+	top: 100px;
+	left:400px;
+	padding-left:40px;
+	padding-top:20px;
+	text-align:left;
+}
+.box{
+	width: 350px;
+	height: 25px;
+}
+
+#sub{
+  background-color: palevioletred  ; 
+  color: #730245;
+  padding: 15px 32px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+  position: relative;
+  left: 280px;
+  top:20px;
+  border-style:solid;
+}
+</style>
+</head>
+<body>
+<h1 id="header"> Welcome,<%=name%> to the SMART BLOOD BANK! Please specify your requirements. <h1>
+<div id="contain">
+<form id="formreq" action='/check'>
+Enter the Blood Type Required : <br>
+<input class="box" type="text" placeholder="Blood Type" name="blood"> <br> 
+<input id="sub" type="submit"> 
+</form>
+</div>
+</body>
+</html>

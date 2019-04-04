@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head> <title> Admin Page </title> 
+<style>
+body{
+	background-color:#EBF5FB;
+	color:#730245;
+}
+
+#header1{
+	text-align:center;
+	color:#730245;
+	background-color:#D6EAF8;
+	font-size: 40px;
+}
+</style>
+<body>
+<h1 id="header1"> Welcome Admin! </h1>
+<strong><h2>Here are all the Donors Registered on Smart Blood Bank : </h2> </strong>
+<ul>
+<% people.forEach( (person) => { %>
+<li>
+<a href="/person?name=<%= person.name %>"><%= person.name %></a> :
+<%= person.age %>
+</li>
+
+<% }); %>
+</ul>
+
+<h2> Click on each user to view the details or update the Donation History and Medical Records of the registered donors of Smart Blood Bak.</h2>
+
+</body>
+</html> 

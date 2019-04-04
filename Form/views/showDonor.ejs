@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+<head> <title> Donor List </title>
+<style>
+body {
+background-color:  #EBF5FB ;
+font-size: 30px;
+color: #730245;
+margin-left:450px;
+margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+<strong>Possible Donors : </strong><br>
+<ul>
+<% people.forEach( (person) => { if(person.bloodgroup === 'B+' ){ %>
+<li>
+<form method='POST' action='/helpmsg'>
+    Name: <%= person.name %> <br>
+	<input name='name' value='<%= person.name %>' hidden>
+     Age:<%= person.age %>        <br>
+ Address:<%= person.address%>     <br>
+  <button> Send Request </button> <br>
+ </form>
+</li>
+
+<% }}); %>
+</ul>
+<br>
+
+
+</body>
+</html> 
